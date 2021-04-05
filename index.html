@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messed up Juli</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');      body {
+        font-family: 'Oswald', serif;
+        background-image: url(https://img.wallpapersafari.com/desktop/1920/1080/70/44/eUfLP6.jpg);
+        color:rgb(4, 71, 80);
+        text-align: center;
+        font-size:20px;
+        padding: 0 30px 0 30px ;
+        }
+
+      h1 {
+        margin-bottom: -5px;
+      }
+      
+      #click {
+        text-decoration:underline;
+      }
+      #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 0px 0 10px 0;
+      }
+      
+      #myImg:hover {opacity: 0.7;}
+      
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      }
+      
+      /* Modal Content (image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+      
+      /* Caption of Modal Image */
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+      
+      /* Add Animation */
+      .modal-content, #caption {  
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+      
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+      }
+      
+      @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+      }
+      
+      /* The Close Button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px){
+        .modal-content {
+          width: 100%;
+        }
+      }
+      </style>
+</head>
+<body>
+    <dev>
+      <h1>Hey babe</h1>
+      <p>Thought it's easier this way. If you don't really wanna bother, I und that and you can leave.
+        <br>
+        I'm sorry for making your life hard sometimes. Some things are becoming clearer to me and I wanna let you know what's up.
+        <br><br>
+        Firstly, you probably already know that, but it's not your fault when I get sad or angry most times for no reason.
+        The problem is from me and from the way I function and interpret the world.
+        <br></p>
+        <p id="click">This is the kind of shit my mind gets through (click on it) :</p>
+        <img id="myImg" src="Insecure.jpg" style="width:100%; max-width: 400px">
+        <p>I am not 100% like this (thank god, right?) and I got better since I'm with you (for sure you noticed at least a little improvment ?)
+        But I see now that I really need to work on that, both for you and for myself, cause I really can't live like this.
+        I promise you I'll try hard, I already started, to be more rational in my reactions.
+        <br><br>
+        Thank you for all the patience you've had with me. I truly know it can be hard for you to know how to deal with me.
+        <br>
+       I really know you love me, because no one else would have accepted all I put you through. I just need to tell my overthinking brain to shut up.
+        <br><br>
+        Sorry for all. May God help me and help us.
+        <br>
+        I love you 💕</p></dev>
+
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
